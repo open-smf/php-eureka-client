@@ -110,6 +110,7 @@ class EurekaClientTest extends TestCase
             ->setInstanceId($this->instanceId)
             ->setHostName('test_host_name')
             ->setApp($this->appName)
+            ->setStatus('UP')
             ->setIpAddr('127.0.0.1')
             ->setPort(80)
             ->setSecurePort(433)

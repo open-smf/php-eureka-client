@@ -30,6 +30,16 @@ class Instance extends Parameters
     }
 
     /**
+     * @param string $status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        return $this->set('status', $status);
+    }
+
+    /**
      * @param string $app
      *
      * @return $this
@@ -58,8 +68,8 @@ class Instance extends Parameters
     public function setPort($port, $enabled = true)
     {
         return $this->set('port', [
-            '$' => $port,
-            '@enabled' => ($enabled) ? 'true' : 'false'
+            '$'        => $port,
+            '@enabled' => ($enabled) ? 'true' : 'false',
         ]);
     }
 
@@ -72,8 +82,8 @@ class Instance extends Parameters
     public function setSecurePort($port, $enabled = true)
     {
         return $this->set('securePort', [
-            '$' => $port,
-            '@enabled' => ($enabled) ? 'true' : 'false'
+            '$'        => $port,
+            '@enabled' => ($enabled) ? 'true' : 'false',
         ]);
     }
 
